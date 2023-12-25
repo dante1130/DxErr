@@ -10,7 +10,6 @@
 //
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //--------------------------------------------------------------------------------------
-#include "stdafx.h"
 #include "dxerr.h"
 
 #include <stdio.h>
@@ -19,7 +18,6 @@
 #if !defined(WINAPI_FAMILY) || (WINAPI_FAMILY == WINAPI_FAMILY_DESKTOP_APP)
 #include <ddraw.h>
 #include <d3d9.h>
-#include <audiodefs.h>
 #include <dsound.h>
 
 #define DIRECTINPUT_VERSION 0x800
@@ -132,6 +130,10 @@ const CHAR* WINAPI DXGetErrorStringA( _In_ HRESULT hr )
 //--------------------------------------------------------------------------------------
 #undef CHK_ERR
 #undef CHK_ERRA
+#undef CHK_ERRA_W
+#undef CHK_ERR_W
+#undef CHK_ERRA_A
+#undef CHK_ERR_A
 #undef HRESULT_FROM_WIN32b
 #undef CHK_ERR_WIN32A
 #undef CHK_ERR_WIN32_ONLY
